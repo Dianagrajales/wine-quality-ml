@@ -1,0 +1,18 @@
+model:
+  n_estimators: 100
+  max_depth: 10
+  random_state: 42
+
+data:
+  path: data/winequality-red.csv
+  test_size: 0.2
+  separator: ";"
+  target: quality
+
+mlflow:
+  experiment_name: wine-quality-regression
+  tracking_uri: file:///mlruns
+
+thresholds:
+  rmse_max: 1.0
+  r2_min: 0.3
